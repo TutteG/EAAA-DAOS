@@ -60,6 +60,7 @@ varetypenr varchar(25) foreign key references varetype(varetypenr)
 
 create table ordrevare(
 ordrenr varchar(50) constraint ordrenrforeign foreign key (ordrenr) references ordre(ordrenr),
-varenr varchar(25) constraint varenrforeign foreign key (varenr) references vare(varenr)
+varenr varchar(25) constraint varenrforeign foreign key (varenr) references vare(varenr),
+antal int not null,
 primary key(ordrenr, varenr)
 )
