@@ -6,18 +6,20 @@ select vm.aarstal from vm
 
 
 --8.1
-select distinct rytter.init, COUNT(*) from rytter join placering
+select distinct rytter.init, COUNT(*) counter from rytter join placering
 on rytter.init = placering.init
 group by rytter.init
+order by counter desc
 
 
 --8.2
 select distinct rytter.init, COUNT(placering.plac) from rytter join placering
 on rytter.init = placering.init
+--where placering.plac is not null
 group by rytter.init
 
 --8.3
-select distinct rytter.init, COUNT(placering.plac) as Placeringer,  MIN(placering.plac) as 'Bedste Placering', MAX(placering.plac) as 'Dårligste Placering' from rytter join placering
+select distinct rytter.init, COUNT(placering.plac) as 'Placeringer',  MIN(placering.plac) as 'Bedste Placering', MAX(placering.plac) as 'Dårligste Placering' from rytter join placering
 on rytter.init = placering.init
 group by rytter.init
 having count(placering.plac) > 1
