@@ -49,7 +49,8 @@ join konto k
 on b.cpr = k.kontoejer
 join postering p
 on p.kontonr = k.kontonr
-where YEAR(p.dato) = YEAR(GETDATE()) or YEAR(p.dato) = YEAR(GETDATE())
+where YEAR(p.dato) = YEAR(GETDATE()) 
+or YEAR(p.dato) = YEAR(GETDATE())
 
 --18.9
 select SUM(k.saldo)

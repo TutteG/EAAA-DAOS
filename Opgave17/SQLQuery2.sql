@@ -3,6 +3,7 @@ select * from bankkunde
 -- 17.1
 drop proc if exists myproc
 
+go
 create proc myProc
 as
 select bk.navn, k.kontonr, k.saldo 
@@ -14,7 +15,7 @@ exec myProc
 
 --17.2
 drop proc if exists myProc2
-
+go
 create proc myProc2 
 @cpr char(10)
 as
@@ -29,7 +30,7 @@ exec myProc2 '12'
 
 --17.3
 drop proc if exists myProc3
-
+go
 create proc myProc3 
 @cpr char(10)
 as
@@ -46,7 +47,7 @@ exec myProc3 '12'
 
 --17.4
 drop proc if exists myProc4
-
+go
 create proc myProc4 
 @cpr char(10), @antal int output
 as
@@ -62,7 +63,7 @@ select @x as saldo
 
 --17.5
 drop proc if exists myProc5
-
+go
 create proc myProc5
 @kontonr int, @beloeb decimal
 as
@@ -75,7 +76,7 @@ exec myProc2 '12'
 
 --17.6
 drop proc if exists myProc6
-
+go
 create proc myProc6
 @cpr char(10)
 as
