@@ -1,4 +1,4 @@
-package opgave8;
+package opgave11;
 
 public class CommonThread extends Thread {
 	String navn;
@@ -12,11 +12,9 @@ public class CommonThread extends Thread {
 
 	@Override
 	public void run() {
-
 		for (int i = 0; i < 100; i++) {
 			common.opdaterGlobal();
 			common.TagerRandomTid(22);
 		}
 	}
-
 }
