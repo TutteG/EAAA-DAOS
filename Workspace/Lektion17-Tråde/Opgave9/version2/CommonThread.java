@@ -1,12 +1,10 @@
-package opgave9;
+package version2;
 
 import dyrelyd.Rand;
 
 public class CommonThread extends Thread {
 	String navn;
 	Common common;
-	static boolean[] locked = new boolean[2];
-	static int turn = 0;
 
 	public CommonThread(String name, Common common) {
 		super();
@@ -18,9 +16,9 @@ public class CommonThread extends Thread {
 	public void run() {
 		int myTurn = Integer.parseInt(navn);
 		int otherTurn = myTurn == 0 ? 1 : 0;
-		locked[myTurn] = true;
-		turn = otherTurn;
-		while (locked[otherTurn] && turn == otherTurn) {
+		common.locked[myTurn] = true;
+		common.turn = otherTurn;
+		while (common.locked[otherTurn] && common.turn == otherTurn) {
 			// fuck off
 			try {
 				Rand rand = new Rand(10, 0);
@@ -35,7 +33,7 @@ public class CommonThread extends Thread {
 			common.opdaterGlobal();
 			common.TagerRandomTid(1);
 		}
-		locked[myTurn] = false;
+		common.locked[myTurn] = false;
 	}
 
 }
