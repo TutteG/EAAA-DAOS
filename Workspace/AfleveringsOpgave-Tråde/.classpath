@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Opgave1-BusyWaiting"/>
+	<classpathentry kind="src" path="Opgave2-Semaphor"/>
+	<classpathentry kind="src" path="Opgave3-Monitor"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

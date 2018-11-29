@@ -1,8 +1,4 @@
-package src;
-
-import thread.Common;
-import thread.OfficeThread;
-import thread.SocialWorkerThread;
+package thread;
 
 public class mainApp {
 	public static void main(String[] args) {
