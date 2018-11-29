@@ -1,11 +1,8 @@
 package opgave10;
 
-import java.util.concurrent.Semaphore;
-
 public class CommonThread extends Thread {
 	String navn;
 	Common common;
-	static Semaphore semaphore = new Semaphore(1);
 
 	public CommonThread(String name, Common common) {
 		super();
@@ -15,18 +12,15 @@ public class CommonThread extends Thread {
 
 	@Override
 	public void run() {
-		try {
-			semaphore.acquire();
-			for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 100; i++) {
+			try {
 				common.opdaterGlobal();
-				common.TagerRandomTid(22);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
 			}
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			common.TagerRandomTid(22);
 		}
 
-		semaphore.release();
 	}
 
 }

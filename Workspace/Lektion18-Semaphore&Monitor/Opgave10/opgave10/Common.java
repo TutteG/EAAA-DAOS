@@ -1,7 +1,10 @@
 package opgave10;
 
+import java.util.concurrent.Semaphore;
+
 public class Common {
 	int global = 0;
+	Semaphore sema = new Semaphore(1);
 
 	public Common() {
 		// TODO Auto-generated constructor stub
@@ -22,12 +25,12 @@ public class Common {
 		return global;
 	}
 
-	public void opdaterGlobal() {
-
+	public void opdaterGlobal() throws InterruptedException {
+		sema.acquire();
 		int temp;
 		temp = global;
 		TagerRandomTid(10);
 		global = temp + 1;
-
+		sema.release();
 	}
 }

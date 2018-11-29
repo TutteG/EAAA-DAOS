@@ -2,8 +2,8 @@ package version2;
 
 public class Common {
 	int global = 0;
-	public boolean[] locked = new boolean[2];
 	public volatile int turn = 0;
+	public boolean[] locked = new boolean[2];
 
 	public Common() {
 		// TODO Auto-generated constructor stub

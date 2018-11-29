@@ -13,7 +13,6 @@ public class mainApp {
 			t1.join();
 			t2.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println(common.getGlobal());
