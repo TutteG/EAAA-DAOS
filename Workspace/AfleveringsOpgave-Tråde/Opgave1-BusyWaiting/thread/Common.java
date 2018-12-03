@@ -10,6 +10,7 @@ public class Common {
 
 	public int drawCount() {
 		queueLast++;
+		System.out.println(queueLast + " Er nu trukket");
 		return queueLast;
 	}
 

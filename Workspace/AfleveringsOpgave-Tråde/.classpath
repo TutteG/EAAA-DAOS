@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="Opgave1-BusyWaiting"/>
 	<classpathentry kind="src" path="Opgave2-Semaphor"/>
 	<classpathentry kind="src" path="Opgave3-Monitor"/>
+	<classpathentry kind="src" path="Opgave4-Lorten"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
