@@ -5,8 +5,8 @@ public class mainApp {
 		Common common = new Common(100);
 		OfficeThread o1 = new OfficeThread(common, "Niels");
 		OfficeThread o2 = new OfficeThread(common, "Arne");
-		SocialWorkerThread sw1 = new SocialWorkerThread(common);
-		SocialWorkerThread sw2 = new SocialWorkerThread(common);
+		SocialWorkerThread sw1 = new SocialWorkerThread(common, "Jane");
+		SocialWorkerThread sw2 = new SocialWorkerThread(common, "Søren");
 
 		o1.start();
 		o2.start();

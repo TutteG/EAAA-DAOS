@@ -2,11 +2,13 @@ package opgave4;
 
 public class SocialWorkerThread extends Thread {
 	Common common;
+	String name;
 
-	public SocialWorkerThread(Common common) {
+	public SocialWorkerThread(Common common, String name) {
 		// TODO Auto-generated constructor stub
 		super();
 		this.common = common;
+		this.name = name;
 	}
 
 	@Override
@@ -14,7 +16,7 @@ public class SocialWorkerThread extends Thread {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < 50; i++) {
 			try {
-				common.take();
+				common.take(name);
 				sleep(10);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block

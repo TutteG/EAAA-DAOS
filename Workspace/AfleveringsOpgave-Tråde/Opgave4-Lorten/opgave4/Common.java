@@ -24,7 +24,7 @@ public class Common {
 				wait();
 			}
 			buffer[nextIn] = x;
-			System.out.println(buffer[nextIn] + " har trukket nr " + nextIn);
+			System.out.println(buffer[nextIn] + " har trukket nr. " + (nextIn + 1));
 			nextIn = (nextIn + 1) % capacity;
 			count++;
 		} finally {
@@ -32,12 +32,12 @@ public class Common {
 		}
 	}
 
-	public synchronized void take() throws InterruptedException {
+	public synchronized void take(String x) throws InterruptedException {
 		try {
 			while (count == 0) {
 				wait();
 			}
-			System.out.println("Det er nu nr: " + nextOut + ": " + buffer[nextOut]);
+			System.out.println(x + " Råber \"Det er nu nr. " + (nextOut + 1) + ": " + buffer[nextOut] + "!\"");
 			nextOut = (nextOut + 1) % capacity;
 			count--;
 		} finally {
