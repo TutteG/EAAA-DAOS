@@ -17,7 +17,7 @@ public class SocialWorkerThread extends Thread {
 		for (int i = 0; i < 50; i++) {
 			try {
 				common.take(name);
-				sleep(10);
+				sleep(15);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

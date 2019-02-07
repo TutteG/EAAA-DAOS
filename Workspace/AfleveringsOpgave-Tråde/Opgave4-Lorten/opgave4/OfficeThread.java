@@ -13,7 +13,7 @@ public class OfficeThread extends Thread {
 
 	@Override
 	public void run() {
-		for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 100; i++) {
 			try {
 				common.append(name);
 				sleep(10);

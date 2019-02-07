@@ -18,9 +18,9 @@ public class OfficeThread extends Thread {
 	public void run() {
 		// TODO Auto-generated method stub
 		int otherTurn = myID == 0 ? 1 : 0;
-		locked[myID] = true;
-		turn = otherTurn;
 		for (int i = 0; i < 50; i++) {
+			locked[myID] = true;
+			turn = otherTurn;
 			while (locked[otherTurn] && turn == otherTurn) {
 				try {
 					sleep(5);
@@ -30,7 +30,7 @@ public class OfficeThread extends Thread {
 				}
 			}
 			common.drawCount();
+			locked[myID] = false;
 		}
-		locked[myID] = false;
 	}
 }

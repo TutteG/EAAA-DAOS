@@ -13,7 +13,14 @@ public class OfficeThread extends Thread {
 	public void run() {
 
 		for (int i = 0; i < 50; i++) {
-			common.drawCount();
+			try {
+				common.drawCount();
+				sleep(10);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e);
+				e.printStackTrace();
+			}
 		}
 	}
 }

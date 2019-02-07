@@ -1,9 +1,5 @@
 package monitor;
 
-import thread.Common;
-import thread.OfficeThread;
-import thread.SocialWorkerThread;
-
 public class mainApp {
 	public static void main(String[] args) {
 		Common common = new Common();

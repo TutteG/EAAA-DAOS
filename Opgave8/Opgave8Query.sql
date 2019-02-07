@@ -3,6 +3,7 @@ use Opgave7_Cykelrytter
 go
 
 select vm.aarstal from vm
+select count(rytter.init) from rytter
 
 
 --8.1

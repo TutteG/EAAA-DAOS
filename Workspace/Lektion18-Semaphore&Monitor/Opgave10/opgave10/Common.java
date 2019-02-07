@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 
 public class Common {
 	int global = 0;
-	Semaphore sema = new Semaphore(1);
+	private Semaphore sema = new Semaphore(1);
 
 	public Common() {
 		// TODO Auto-generated constructor stub

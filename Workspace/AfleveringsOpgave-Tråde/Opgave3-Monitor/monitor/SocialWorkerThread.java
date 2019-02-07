@@ -12,19 +12,13 @@ public class SocialWorkerThread extends Thread {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		while (true) {
-			if (!common.QueueIsEmpty()) {
-				common.yellCount();
-			} else {
-				try {
-					System.out.println("zzzzzzzz");
-					sleep(5000);
-
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
+		try {
+			common.yellCount();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+
 	}
+
 }

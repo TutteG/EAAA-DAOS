@@ -1,9 +1,5 @@
 package semaphor;
 
-import thread.Common;
-import thread.OfficeThread;
-import thread.SocialWorkerThread;
-
 public class mainApp {
 	public static void main(String[] args) {
 		Common common = new Common();
@@ -19,7 +15,6 @@ public class mainApp {
 			o2.join();
 			sw.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

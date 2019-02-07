@@ -18,7 +18,7 @@ public class SocialWorkerThread extends Thread {
 			} else {
 				try {
 					System.out.println("zzzzzzzz");
-					sleep(5000);
+					sleep(50);
 
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block

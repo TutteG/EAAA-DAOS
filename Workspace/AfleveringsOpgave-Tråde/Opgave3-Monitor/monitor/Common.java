@@ -8,12 +8,19 @@ public class Common {
 		return queueLast == count;
 	}
 
-	public synchronized void drawCount() {
+	public synchronized void drawCount() throws InterruptedException {
 		queueLast++;
+		notifyAll();
 	}
 
-	public void yellCount() {
-		count++;
-		System.out.println("det er nu!: " + count);
+	public synchronized void yellCount() throws InterruptedException {
+		while (true) {
+			while (QueueIsEmpty()) {
+				System.out.println("sleep");
+				wait();
+			}
+			count++;
+			System.out.println("det er nu!: " + count);
+		}
 	}
 }

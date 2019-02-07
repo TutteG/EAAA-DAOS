@@ -41,7 +41,7 @@ public class Common {
 			nextOut = (nextOut + 1) % capacity;
 			count--;
 		} finally {
-			notify();
+			notifyAll();
 		}
 	}
 
